@@ -1,4 +1,4 @@
-namespace LABA1
+﻿namespace LABA1
 {
     partial class Form1
     {

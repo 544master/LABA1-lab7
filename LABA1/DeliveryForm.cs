@@ -66,8 +66,7 @@ namespace laba1.Forms
                 Location = new Point(10, 40),
                 Width = 100,
                 Items = { "Новый", "В пути", "Доставлен" },
-                Name = "statusComboBox",
-                DropDownStyle = ComboBoxStyle.DropDownList
+                Name = "statusComboBox"
             };
 
             addDeliveryButton = new Button
@@ -275,10 +274,8 @@ namespace laba1.Forms
 
             deliveryManager.Save();
             UpdateDeliveriesList();
-            // Убран MessageBox.Show("Доставка отредактирована!", ...): это была
-            // чисто информационная блокирующая диалоговая форма без функциональной
-            // необходимости — она мешала автоматизированному UI-тестированию
-            // (лаб. №6), так как виснет, ожидая ручного нажатия "ОК".
+            MessageBox.Show("Доставка отредактирована!", "Успех",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
